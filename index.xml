@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PrestaShop Specs</title>
+    <title>Home on PrestaShop Specs</title>
     <link>https://build.prestashop.com/prestashop-specs/</link>
-    <description>Recent content on PrestaShop Specs</description>
+    <description>Recent content in Home on PrestaShop Specs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://build.prestashop.com/prestashop-specs/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -36,6 +36,16 @@ Elements in the page Logo Block Logo block: There is a logo block on the left of
       <description>Orders &amp;gt; Orders &amp;gt; Add new order
 As a merchant, I want to be able to manually add an order to my back-office. Creating a new order is divided into 6 steps:
  I. Customer selection with his/her old orders and carts II. Order cart III. Vouchers IV. Address V. Summary VI. Multistore  I. Customer selection To select the customer, the merchant has to type any character chain that is contained in the customer&amp;rsquo;s first name, last name, or email.</description>
+    </item>
+    
+    <item>
+      <title>Add/Edit Catalog Price Rules.md</title>
+      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/add-edit-catalog-price-rules.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/add-edit-catalog-price-rules.html</guid>
+      <description>SPECIFICATIONS - CATALOG &amp;gt; DISCOUNTS &amp;gt; CATALOG PRICE RULES User Story : As a merchant I need to be able to correctly create and edit discounts to my customers based on specific conditions, such as product quantity or category, combinations or brands.
+WHY The Add/edit catalog price rule page (Catalog &amp;gt; Discounts &amp;gt; Catalog price rules) is expected to be migrated to Symfony for the 1.7.7 version, but many behaviours (especially for complex rules) are not well specified which may introduce regressions and bugs.</description>
     </item>
     
     <item>
@@ -74,20 +84,6 @@ Clicking on &amp;lsquo;What happened?&amp;rsquo; should display Your uploaded fi
 Row action does not apply to the ID&amp;rsquo;s checkbox column and to columns with enable/disable actions.
 Grid Adresses ManufacturerAddressGridDefinitionFactory.php Default action in the button: Edit Other available actions in the menu: Delete Row action: Edit
 Row action does not apply to the ID&amp;rsquo;s checkbox column.</description>
-    </item>
-    
-    <item>
-      <title>Cart Rule</title>
-      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/cart-rule.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/cart-rule.html</guid>
-      <description>Cart Rule when 2 vouchers applied to a cart have free shipping.
-2 vouchers should be applied but the shipping should be deducted once.
-If I applied 2 vouchers in a cart:
- Voucher 1: Free Shipping + 5% Voucher 2: Free Shipping + Gift  Then
-Free shipping is applied once with a 5 % discount and a gift.
- When a discount is applied for the cheapest product then the discount summary displays the value of the discount and not the percentage.</description>
     </item>
     
     <item>
@@ -312,6 +308,20 @@ Visitor - All persons without a customer account or customers that are not logge
     </item>
     
     <item>
+      <title>How does Cart Rule works ?</title>
+      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/how-does-cart-rule-works-.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/how-does-cart-rule-works-.html</guid>
+      <description>Cart Rule when 2 vouchers applied to a cart have free shipping.
+2 vouchers should be applied but the shipping should be deducted once.
+If I applied 2 vouchers in a cart:
+ Voucher 1: Free Shipping + 5% Voucher 2: Free Shipping + Gift  Then
+Free shipping is applied once with a 5 % discount and a gift.
+ When a discount is applied for the cheapest product then the discount summary displays the value of the discount and not the percentage.</description>
+    </item>
+    
+    <item>
       <title>Image File Formats</title>
       <link>https://build.prestashop.com/prestashop-specs/1.7/broader-topics/image-file-formats.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -512,16 +522,6 @@ Row action does not apply to the checkbox column and to columns with enable/disa
 This document aims at explaining in details how product and order prices should be calculated in every shop scenarios.
 This is a legal requirement, especially as it has an impact on invoices, so we must ensure prices are correctly calculated on PrestaShop websites.
 Prices have impact on products, orders, but also on discounts, invoices, etc. so this document details the different behaviours for all pages according to the shop scenario.</description>
-    </item>
-    
-    <item>
-      <title>Price Rules</title>
-      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/price-rules.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/discount/price-rules.html</guid>
-      <description>SPECIFICATIONS - CATALOG &amp;gt; DISCOUNTS &amp;gt; CATALOG PRICE RULES User Story : As a merchant I need to be able to correctly create and edit discounts to my customers based on specific conditions, such as product quantity or category, combinations or brands.
-WHY The Add/edit catalog price rule page (Catalog &amp;gt; Discounts &amp;gt; Catalog price rules) is expected to be migrated to Symfony for the 1.7.7 version, but many behaviours (especially for complex rules) are not well specified which may introduce regressions and bugs.</description>
     </item>
     
     <item>
@@ -814,6 +814,51 @@ On the table below are listed all the different cases.
       <description>Order settings specs General Enable final summary This toggle is on No by default.
 When enabled, a summary is displayed in the Front-Office during the checkout, at the payment step:
 This way, the customer can verify before the payment all the information: the delivery address, the invoice address, the selected shipping method &amp;amp; its cost, the products in the cart, the unit price of each product, the quantity of each product, the total for each product line, the subtotal, the shipping cost, and the order total.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/add-edit-feature-value.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/add-edit-feature-value.html</guid>
+      <description>SPECIFICATIONS - CATALOG &amp;gt; ATTRIBUTES &amp;amp; FEATURES &amp;gt; FEATURES &amp;gt; ADD / EDIT FEATURE VALUE While adding or editing a feature value, the following fields / toggles / parameters are displayed:
+ Feature  This drop-down lists all the features and is mandatory. In the case of multistore, it lists only the features associated with the store(s) selected as context.
+Value  This field is mandatory and can be translated: When several languages are installed, a drop-down next to the field is displayed.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/add-edit-feature.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/add-edit-feature.html</guid>
+      <description>SPECIFICATIONS - CATALOG &amp;gt; ATTRIBUTES &amp;amp; FEATURES &amp;gt; FEATURES &amp;gt; ADD / EDIT FEATURE While adding or editing a feature, the following fields / toggles / parameters are displayed:
+ Name  This field is mandatory. If the save button is pressed and if this field is empty for the default language, the following error message is displayed: &amp;ldquo;The field name is required at least in default language&amp;rdquo;. This field can be translated: When several languages are installed, a drop-down next to the field is displayed.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/features-listing.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/features-listing.html</guid>
+      <description>SPECIFICATIONS - CATALOG &amp;gt; ATTRIBUTES &amp;amp; FEATURES &amp;gt; FEATURES HOW FEATURES WORK Features must first be registered on the shop using this &amp;ldquo;Features&amp;rdquo; tab under the &amp;ldquo;Attributes &amp;amp; Features&amp;rdquo; page from the &amp;ldquo;Catalog&amp;rdquo; menu.
+Then, they can be configured on a per-product basis, from the &amp;ldquo;Product&amp;rdquo; page under the &amp;ldquo;Catalog&amp;rdquo; menu.
+:point_right: see the specs of the add/edit product page.
+Once configured on a per-product basis, the features and values of the products are displayed on the front-office product page, in the &amp;ldquo;Product Details&amp;rdquo; tab.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/view-feature.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://build.prestashop.com/prestashop-specs/1.7/back-office/catalog/attributes-and-features/features/view-feature.html</guid>
+      <description>SPECIFICATIONS - CATALOG &amp;gt; ATTRIBUTES &amp;amp; FEATURES &amp;gt; FEATURES &amp;gt; VIEW FEATURE When viewing a feature, the name of the selected feature is displayed as the name of the block.
+Call to action A call to actions is displayed in the header of this page:
+ Add new feature value  👉 See the specs of the add/edit feature value
+Settings wheel When clicking on the settings wheel, the following options are displayed:</description>
     </item>
     
     <item>
